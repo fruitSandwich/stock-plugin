@@ -1,0 +1,54 @@
+{
+	"name": "vscode-plugin-demo",
+	"displayName": "vscode-plugin-demo",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"stock-watch.stocks": {
+					"type": "array",
+					"default": [
+						"SH000001"
+					],
+					"description": "配置需要监控的股票代码"
+				},
+				"stock-watch.updateInterval": {
+					"type": "number",
+					"default": 10000,
+					"description": "配置轮询请求最新数据的时间间隔，单位：毫秒"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"superagent": "^5.0.2"
+	}
+}
