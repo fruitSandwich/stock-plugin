@@ -3,8 +3,9 @@
 	"displayName": "vscode-plugin-demo",
 	"description": "",
 	"version": "0.0.1",
+	"publisher": "fruitsandwich",
 	"engines": {
-		"vscode": "^1.33.0"
+		"vscode": "^1.27.0"
 	},
 	"categories": [
 		"Other"
